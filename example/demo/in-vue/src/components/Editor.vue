@@ -22,6 +22,10 @@
       },
       mounted() {
         var editor = new E(this.$refs.editor)
+        editor.customConfig.menus = [
+          'emoticon',
+          'image'
+        ]
         editor.customConfig.onchange = (html) => {
           this.editorContent = html
         }
